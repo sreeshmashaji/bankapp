@@ -1,0 +1,42 @@
+ const register=(acno,pswd,uname)=>
+     {
+        return db.User.findOne({acno})
+        .then(user=> {
+        if(user)
+        {
+          return {
+            statusCode:422,
+            status:false,
+            message:"User already exist"
+
+            
+          }
+        }
+        else{
+          // database[acno]={
+          //   acno,
+          //   uname,
+          //   "password":pswd,
+          //   Balance:0
+          // }
+          // console.log("database",this.database)
+          const newUser= new db.User({
+            acno,
+          uname,
+          "password":pswd,
+          Balance:0,
+          transaction:[]
+          })
+
+          newUser.save()
+          return {
+            statusCode:200,
+            status:true,
+            message:"User created successfully"
+          }
+        }
+      })
+      }
+    
+
+

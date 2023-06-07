@@ -1,0 +1,101 @@
+<nav class="navbar navbar-light bg-dark " >
+    <a class="navbar-brand  " href="#" style="color:rgb(85, 98, 237);"><b>&#169; HAFC Bank Pvt.Ltd </b></a>
+    <span class="quote text-light">Giving you freedom...</span>
+  </nav>
+  
+     <!--string interpolation-->
+
+  <div class="container col-md-12 mt-0">
+      <div class="d-flex justify-content-center h-100">
+          <div class="card">
+              <div class="card-header">
+                  <h3 class="text-center">Credit Card</h3>
+                  
+              </div>
+              <div class="card-body">
+                  <form (ngSubmit)="creditcardfun()">
+                     
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        
+                        <input type="text" class="form-control" [(ngModel)]="FirstName"placeholder="Enter First Name" id="fname" required>
+                        
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        
+                        <input type="text" class="form-control"  [(ngModel)]="LastName"placeholder="Enter Last Name" id="lnmae" required>
+                        
+                    </div>
+                     
+                    <div class="input-group form-group">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-user"></i></span>
+                          </div>
+                          
+                          <input type="text" class="form-control" [(ngModel)]="AccountNumber" placeholder="Enter  account number" id="login_accno" required>
+                          
+                      </div>
+                      
+                      
+                      <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        
+                        <input type="text" class="form-control"  [(ngModel)]="PancardNumber"placeholder= "Enter pancard number" id="pan" required>
+                        
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        
+                        <input type="text" class="form-control" [(ngModel)]="Age" placeholder=" Enter age" id="age" required>
+                        
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        
+                        <input type="text" class="form-control"  [(ngModel)]="AAdhar"placeholder=" Enter adhar Number" id="adhar" required>
+                        
+                    </div> 
+                      
+                      <div class="form-group">
+                          <input type="submit" value="Apply" (click)="creditcardfun()"class="btn float-right login_btn " style="width:50%" >
+                      </div>
+                  </form>
+              </div>
+              <p style="color:white;align-items:baseline;">Not a user? <a href="register">Register</a></p>
+          </div>
+      </div>
+  </div>
+  <table class="table table-dark" style="border: 1px;">
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last name</th>
+        <th>Account Nmuber</th>
+        <th>Pancard Number</th>
+        <th>Age</th>
+        
+        <th>Adhar</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let data of dummyarray">
+    <td>{{data.FirstName}}</td>
+    <td>{{data.LastName}}</td>
+    <td>{{data.AccountNumber}}</td>
+    <td>{{data.PancardNumber}}</td>
+    <td>{{data.Age}}</td>
+    <td>{{data.AAdhar}}</td>
+    </tr>
+</tbody>
+</table>

@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<p>{{datenew|date:'short'}}</p>
+
+<table class="table table-dark" style="border: 1px;">
+    <thead>
+    <tr>
+        <th>Amount</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Date</th>
+        
+        
+        
+        
+    </tr>
+</thead>
+    <!-- *ngFor="let data of dummyarray" -->
+    <!-- <td>{{data.FirstName}}</td> -->
+<tbody>
+
+    <tr *ngFor="let data of transaction">
+        <td>{{data.amount}}</td> 
+        <td>{{data.type}}</td> 
+        <td>{{data.status}}</td> 
+        <td>{{data.Date|date:'short'}}</td>
+    
+</tbody>
+</table>
+

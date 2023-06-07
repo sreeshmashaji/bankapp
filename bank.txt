@@ -1,0 +1,20 @@
+ angular bank app
+
+
+>json
+these are object type
+{
+"abc":123,
+"bggd":678
+}
+
+>type script and javascript
+type script are used to create large scale application.we have to specify the type of string
+
+>framework  is set of rebuild codes.It works as per the  set of defined  rules.eg:angular ,react
+
+>mogodb is structureless database
+
+>to create a new angular project :ng new "name of projrct"
+
+ 

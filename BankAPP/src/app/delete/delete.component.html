@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="container">
+
+
+<div class="card text-center m-auto">
+
+
+    
+
+    <app-childdelete [item]="delacno" (onDelete)="delete($event)"  (onCancel)="cancel()"></app-childdelete>
+
+<div class=" card-body m-5">
+    <div class="mb-5">
+        <h2 class="card-title text-light">Delete Your Account</h2>
+    </div>
+    <h5 class="card-title text-light">Account holder : {{name}}</h5>
+      <p class="card-text text-light">Account Number  :  {{acno}}</p>
+      <a (click)="delacc()" class="btn btn-primary" >Delete this account?</a>
+</div>
+</div>
+</div>
